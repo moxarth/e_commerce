@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import '../../size_config.dart';
 
-
 class CustomAppBar extends PreferredSize {
   final double rating;
 
@@ -25,9 +24,13 @@ class CustomAppBar extends PreferredSize {
             SizedBox(
               height: getProportionateScreenHeight(45),
               width: getProportionateScreenHeight(45),
-              child: FlatButton(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(40),
+              child: TextButton(
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                    ),
+                  ),
                 ),
                 onPressed: () {
                   Navigator.pop(context);

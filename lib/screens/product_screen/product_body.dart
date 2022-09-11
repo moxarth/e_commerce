@@ -48,9 +48,7 @@ class ProductBody extends StatelessWidget {
             ),
             child: CustomButton(
               text: "ADD TO CART",
-              onPressed: (){
-
-              },
+              onPressed: () {},
             ),
           ),
           SizedBox(
@@ -264,15 +262,15 @@ class _ColorSelectionState extends State<ColorSelection> {
               color: Colors.orange.withOpacity(0.4),
               shape: BoxShape.circle,
             ),
-            child: FlatButton(
-              padding: EdgeInsets.zero,
+            child: TextButton(
+              style: TextButton.styleFrom(padding: const EdgeInsets.all(0)),
               child: Icon(Icons.remove),
-              onPressed: (){
-
-              },
+              onPressed: () {},
             ),
           ),
-          SizedBox(width: getProportionateScreenHeight(10.0),),
+          SizedBox(
+            width: getProportionateScreenHeight(10.0),
+          ),
           Container(
             margin: EdgeInsets.only(right: getProportionateScreenHeight(20.0)),
             height: getProportionateScreenHeight(40.0),
@@ -282,12 +280,10 @@ class _ColorSelectionState extends State<ColorSelection> {
               shape: BoxShape.circle,
             ),
             child: Center(
-              child: FlatButton(
-                padding: EdgeInsets.zero,
+              child: TextButton(
+                style: TextButton.styleFrom(padding: const EdgeInsets.all(0)),
                 child: Icon(Icons.add),
-                onPressed: (){
-
-                },
+                onPressed: () {},
               ),
             ),
           ),

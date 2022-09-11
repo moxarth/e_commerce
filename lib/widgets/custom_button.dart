@@ -20,7 +20,7 @@ class CustomButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       height: getProportionateScreenHeight(56),
-      child: FlatButton(
+      child: TextButton(
         onPressed: onPressed,
         child: Stack(
           children: [
@@ -40,16 +40,18 @@ class CustomButton extends StatelessWidget {
                 height: getProportionateScreenHeight(30.0),
                 width: getProportionateScreenWidth(50.0),
                 child: CircularProgressIndicator(
-                    valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
+                  valueColor: new AlwaysStoppedAnimation<Color>(Colors.white),
                 ),
               ),
             ),
           ],
         ),
-        color: Theme.of(context).primaryColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(
-            getProportionateScreenHeight(18.0),
+        style: TextButton.styleFrom(
+          backgroundColor: Theme.of(context).primaryColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+              getProportionateScreenHeight(18.0),
+            ),
           ),
         ),
       ),

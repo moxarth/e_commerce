@@ -55,13 +55,13 @@ class _BodyState extends State<Body> {
 
   showAlertDialog(BuildContext context) {
     // set up the buttons
-    // Widget cancelButton = FlatButton(
+    // Widget cancelButton = TextButton(
     //   child: Text("Cancel"),
     //   onPressed:  () {
     //     Navigator.pop(context);
     //   },
     // );
-    Widget continueButton = FlatButton(
+    Widget continueButton = TextButton(
       child: Text("Back To Login"),
       onPressed:  () {
         Navigator.pop(context);
